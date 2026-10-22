@@ -1,0 +1,49 @@
+css/animations.css
+  s_a7bb118673e299::t_9f957d49b4c58d 1-47
+css/base.css
+  s_a7bb118673e299::t_80cc76bf83fb72 1-150
+css/components.css
+  s_a7bb118673e299::t_7e7feccfbc949f 1-683
+css/responsive.css
+  s_a7bb118673e299::t_e1bc552e11759a 1-1432
+js/artwork.js
+  s_a7bb118673e299::t_a807455f9afbfa 1-173
+js/boot.js
+  s_a7bb118673e299::t_79067d37e8a333 1-64
+js/clock.js
+  s_a7bb118673e299::t_9657954b8d69fc 1-18
+js/contact.js
+  s_a7bb118673e299::t_d0817efd1435a3 1-203
+js/preferences.js
+  s_a7bb118673e299::t_96156bf4aa2dab 1-58
+js/projects.js
+  s_a7bb118673e299::t_50028d6af5631c 1-82
+js/settings.js
+  s_a7bb118673e299::t_266c303a181f95 1-80
+js/terminal.js
+  s_a7bb118673e299::t_8dc25b795fe088 1-49
+js/windows.js
+  s_a7bb118673e299::t_41687d5877ae5d 1-120
+styles.css
+  s_a7bb118673e299::t_bef04924d87df5 1-4
+README.md
+  s_a7bb118673e299::t_bd76e7f5b6d1cd 1-40
+index.html
+  s_a7bb118673e299::t_d866982f0707cd 1-1177
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "43bafece19ec0c88bd111a064a5d1ddb63e42ef3",
+  "prompts": {},
+  "sessions": {
+    "s_a7bb118673e299": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "1c287094-fb96-4c92-8d73-1030911493e4",
+        "model": "auto"
+      },
+      "human_author": "Dominiqu <u24580482@tuks.co.za>"
+    }
+  }
+}
