@@ -1,0 +1,47 @@
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes equalize {
+  to {
+    transform: scaleY(0.5);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideOut {
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+@media (min-width: 1400px) {
+  body {
+    padding-top: 45px;
+  }
+  .hero-layout {
+    grid-template-columns: 210px 1fr;
+    gap: 35px;
+  }
+  .ascii {
+    font-size: 19.6px;
+  }
+  .terminal-body {
+    padding: 27px 34px 0;
+  }
+  .hero-description {
+    font-size: 18.2px;
+  }
+  .mini-code {
+    font-size: 12px;
+  }
+}

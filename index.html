@@ -1,0 +1,1177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Dominiqu Nigatu — developer and digital maker. Explore projects in a terminal-inspired portfolio."
+    />
+    <meta name="theme-color" content="#080d09" />
+    <title>Dominiqu Nigatu — Portfolio OS</title>
+    <link rel="stylesheet" href="styles.css?v=terminal-6" />
+    <script src="js/preferences.js?v=terminal-6" defer></script>
+    <script src="js/projects.js?v=terminal-6" defer></script>
+    <script src="js/contact.js?v=terminal-6" defer></script>
+    <script src="js/clock.js?v=terminal-6" defer></script>
+    <script src="js/windows.js?v=terminal-6" defer></script>
+    <script src="js/terminal.js?v=terminal-6" defer></script>
+    <script src="js/settings.js?v=terminal-6" defer></script>
+    <script src="js/boot.js?v=terminal-6" defer></script>
+    <script src="js/artwork.js?v=terminal-6" defer></script>
+  </head>
+  <body>
+    <div
+      id="boot-screen"
+      class="boot-screen"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="boot-title"
+    >
+      <div class="boot-card">
+        <p class="command-label">DOMINIQU / PERSONAL WORKSPACE</p>
+        <h2 id="boot-title">Portfolio OS<span class="cursor">_</span></h2>
+        <div id="boot-lines" aria-live="off"></div>
+        <div class="boot-progress" aria-hidden="true"><span></span></div>
+        <button id="skip-boot" type="button">Skip boot →</button>
+        <p class="boot-hint">A short intro. Your work is one click away.</p>
+      </div>
+    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="desktop">
+      <header class="os-bar">
+        <a href="#home" class="os-brand"
+          ><span class="os-logo">⌘</span>
+          <span
+            >Dominiqu Nigatu <span class="muted">— Portfolio OS</span>
+            <small>v.1.0</small></span
+          ></a
+        >
+        <div class="system-tray">
+          <span class="online-dot"></span
+          ><span class="connection">SYSTEM ONLINE</span><time id="clock"></time
+          ><span aria-hidden="true">▰</span>
+        </div>
+      </header>
+      <div class="workspace">
+        <aside class="sidebar">
+          <section class="panel system-panel">
+            <div class="panel-bar">
+              <span>▣ SYSTEM</span><span aria-hidden="true">− &nbsp; ×</span>
+            </div>
+            <nav aria-label="Main navigation">
+              <a href="#home" data-nav="home"
+                ><span>⌂</span>Home<small>01</small></a
+              ><a href="#about" data-nav="about"
+                ><span>◎</span>About<small>02</small></a
+              ><a href="#work" data-nav="work"
+                ><span>▤</span>Projects<small>03</small></a
+              ><a href="#skills" data-nav="skills"
+                ><span>⌘</span>Skills<small>04</small></a
+              ><a href="#approach" data-nav="approach"
+                ><span>↳</span>Approach<small>05</small></a
+              ><a href="#contact" data-nav="contact"
+                ><span>✉</span>Contact<small>06</small></a
+              ><a href="#settings" data-nav="settings"
+                ><span>⚙</span>Settings<small>07</small></a
+              >
+            </nav>
+          </section>
+          <section class="panel status-panel">
+            <div class="panel-bar">
+              <span>▣ STATUS</span><span aria-hidden="true">− &nbsp; ×</span>
+            </div>
+            <div class="status-content">
+              <p><span class="online-dot"></span> Creative mode: on</p>
+              <p><b>&gt;</b> Software development</p>
+              <p><b>&gt;</b> Design-minded</p>
+              <p><b>&gt;</b> Always learning</p>
+              <div class="meter-label">
+                <span>CURIOSITY</span><span>98%</span>
+              </div>
+              <div class="meter"><span></span></div>
+              <div class="equalizer" aria-hidden="true">
+                <i style="--h: 35%; --delay: 0s"></i
+                ><i style="--h: 75%; --delay: 0.13s"></i
+                ><i style="--h: 95%; --delay: 0.26s"></i
+                ><i style="--h: 60%; --delay: 0.39s"></i
+                ><i style="--h: 80%; --delay: 0.52s"></i
+                ><i style="--h: 40%; --delay: 0.65s"></i
+                ><i style="--h: 65%; --delay: 0.78s"></i
+                ><i style="--h: 90%; --delay: 0.91s"></i
+                ><i style="--h: 50%; --delay: 1.04s"></i
+                ><i style="--h: 35%; --delay: 1.17s"></i
+                ><i style="--h: 60%; --delay: 1.3s"></i
+                ><i style="--h: 25%; --delay: 1.4300000000000002s"></i
+                ><i style="--h: 40%; --delay: 1.56s"></i
+                ><i style="--h: 20%; --delay: 1.69s"></i
+                ><i style="--h: 30%; --delay: 1.82s"></i
+                ><i style="--h: 15%; --delay: 1.9500000000000002s"></i>
+              </div>
+              <div class="status-foot">ALL SYSTEMS NOMINAL</div>
+            </div>
+          </section>
+          <section class="panel now-panel">
+            <div class="panel-bar">
+              <span>▣ CURRENT SESSION</span
+              ><span aria-hidden="true">− &nbsp; ×</span>
+            </div>
+            <div class="session-body">
+              <div class="session-icon">&lt;/&gt;</div>
+              <div>Building with intention<span>ideas → interfaces</span></div>
+            </div>
+            <div class="session-bottom">
+              <span class="online-dot"></span> FOCUS MODE
+              <button
+                id="effects-toggle"
+                aria-pressed="true"
+                title="Toggle screen effects"
+              >
+                CRT: ON
+              </button>
+            </div>
+          </section>
+          <p class="sidebar-note">
+            DESIGNED TO EXPLORE.<br />BUILT TO KEEP LEARNING.
+          </p>
+        </aside>
+        <main id="main" tabindex="-1">
+          <div id="idle-terminal" class="idle-terminal" hidden>
+            <div class="idle-header">
+              <span>dominiqu@portfolio:~$ ./workspace --idle</span
+              ><button id="pause-code" type="button" aria-pressed="false">
+                Pause output
+              </button>
+            </div>
+            <pre id="code-stream" aria-hidden="true"></pre>
+            <div class="idle-caption">
+              <span class="online-dot"></span> Workspace idle. Open a window
+              from the left sidebar.
+            </div>
+          </div>
+          <section class="panel terminal-panel" id="home">
+            <div class="panel-bar">
+              <span>▣ TERMINAL — ~/dominiqu</span>
+              <div class="window-controls">
+                <button
+                  type="button"
+                  data-window-action="minimize"
+                  aria-label="Minimize Home"
+                  title="Minimize"
+                >
+                  −</button
+                ><button
+                  type="button"
+                  data-window-action="close"
+                  aria-label="Close Home"
+                  title="Close"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            <div class="terminal-body">
+              <p class="boot-line">
+                PORTFOLIO OS [VERSION 1.0.26]<br />Connection established.
+                Welcome to my workspace.
+              </p>
+              <div class="hero-layout">
+                <div class="hero-artwork">
+                  <div class="art-stage">
+                    <pre id="hero-ascii" class="ascii" aria-hidden="true"></pre>
+                    <span id="art-cursor" class="art-cursor" aria-hidden="true"
+                      >_</span
+                    >
+                  </div>
+                  <p id="art-label" class="art-label">
+                    DN / PERSONAL SIGNATURE
+                  </p>
+                  <div
+                    class="art-options"
+                    role="group"
+                    aria-label="Choose hero artwork"
+                  >
+                    <button
+                      type="button"
+                      data-artwork="monogram"
+                      aria-pressed="true"
+                    >
+                      DN</button
+                    ><button
+                      type="button"
+                      data-artwork="computer"
+                      aria-pressed="false"
+                    >
+                      PC</button
+                    ><button
+                      type="button"
+                      data-artwork="globe"
+                      aria-pressed="false"
+                    >
+                      Globe
+                    </button>
+                  </div>
+                  <button
+                    id="pause-globe"
+                    class="pause-globe"
+                    type="button"
+                    aria-pressed="false"
+                    hidden
+                  >
+                    Pause rotation</button
+                  ><span class="sr-only" id="art-description"
+                    >Decorative DN monogram. Choose another artwork with the
+                    buttons.</span
+                  >
+                </div>
+                <div class="hero-copy">
+                  <p class="command-label">guest@portfolio:~$ whoami</p>
+                  <h1>Dominiqu Nigatu<span class="cursor">_</span></h1>
+                  <p class="hero-role">DEVELOPER &amp; DIGITAL MAKER</p>
+                  <p class="hero-description">
+                    Turning ideas into thoughtful websites and digital
+                    experiences. Clear on the outside. Carefully built
+                    underneath.
+                  </p>
+                  <div class="hero-links">
+                    <a href="#work">&gt; View projects</a
+                    ><a href="#about">&gt; About me</a
+                    ><a href="#contact">&gt; Get in touch</a>
+                  </div>
+                </div>
+              </div>
+              <div id="terminal-output" aria-live="polite"></div>
+              <form id="terminal-form" class="command-form">
+                <label for="command-input">guest@portfolio:~$</label
+                ><input
+                  id="command-input"
+                  autocomplete="off"
+                  spellcheck="false"
+                  placeholder="type 'help' to get started"
+                  aria-label="Terminal command"
+                /><button type="submit" aria-label="Run command">↵</button>
+              </form>
+            </div>
+          </section>
+          <section class="panel projects-panel" id="work">
+            <div class="panel-bar">
+              <span>▣ PROJECTS — ~/selected-work</span>
+              <div class="window-controls">
+                <button
+                  type="button"
+                  data-window-action="minimize"
+                  aria-label="Minimize Projects"
+                  title="Minimize"
+                >
+                  −</button
+                ><button
+                  type="button"
+                  data-window-action="close"
+                  aria-label="Close Projects"
+                  title="Close"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            <div class="panel-content">
+              <div class="section-intro">
+                <p><span class="green">05</span> projects from my GitHub</p>
+                <span class="file-label">REPOSITORY COLLECTION</span>
+              </div>
+              <div class="filters" role="group" aria-label="Filter projects">
+                <button data-filter="all" aria-pressed="true">
+                  [ All files ]</button
+                ><button data-filter="fullstack" aria-pressed="false">
+                  Full stack</button
+                ><button data-filter="frontend" aria-pressed="false">
+                  Frontend
+                </button>
+              </div>
+              <div class="project-grid">
+                <article class="project" data-category="fullstack">
+                  <button
+                    class="terminal-preview"
+                    type="button"
+                    data-project="01"
+                    aria-label="Open Moyo Client Portal case study"
+                  >
+                    <div class="code-preview">
+                      <div class="mini-titlebar">
+                        <span>● ● ●</span><span>MoyoClientPortal</span>
+                      </div>
+                      <div class="mini-code">
+                        <span class="code-muted">// Moyo Client Portal</span
+                        ><br /><span class="code-key">project</span>
+                        {<br />&nbsp; stack:
+                        <span class="code-string"
+                          >"Angular · ASP.NET Core · SQL Server"</span
+                        >,<br />&nbsp; source:
+                        <span class="code-string">"github.com/Domy05"</span
+                        ><br />}<br /><span class="code-muted"
+                          >&gt; open case study_</span
+                        >
+                      </div>
+                    </div>
+                    <span class="preview-label">CODE PREVIEW / CASE STUDY</span
+                    ><span class="preview-open" aria-hidden="true">↗</span>
+                  </button>
+                  <div class="project-heading">
+                    <h3>Moyo Client Portal</h3>
+                    <span>01</span>
+                  </div>
+                  <p class="project-sub">
+                    From product discovery to order tracking.
+                  </p>
+                  <p class="project-tags">
+                    Angular · ASP.NET Core · SQL Server
+                  </p>
+                  <a
+                    class="card-source"
+                    href="https://github.com/Domy05/MoyoClientPortal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub ↗</a
+                  ><template id="project-01"
+                    ><p class="eyebrow">CASE STUDY / 01</p>
+                    <h2>Moyo Client Portal</h2>
+                    <p>
+                      An online-order client portal connecting an Angular
+                      interface to an ASP.NET Core API. The repository documents
+                      product browsing, a shopping cart, order creation, and
+                      order history.
+                    </p>
+                    <p class="project-tags">
+                      Angular · ASP.NET Core · SQL Server
+                    </p>
+                    <h3>Implemented in the repository</h3>
+                    <ul>
+                      <li>Client login and product browsing</li>
+                      <li>Cart management and order details</li>
+                      <li>
+                        Product-system integration and queued order processing
+                      </li>
+                      <li>Inbound order-status updates</li>
+                    </ul>
+                    <h3>Technical focus</h3>
+                    <p>
+                      Separating the customer experience from product and
+                      order-management boundaries, with EF Core persistence and
+                      configurable external integrations.
+                    </p>
+                    <p class="dialog-note">
+                      Repository case study. Deployment configuration is
+                      documented; a running production deployment has not been
+                      verified.
+                    </p>
+                    <a
+                      class="repo-link"
+                      href="https://github.com/Domy05/MoyoClientPortal"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >&gt; View repository ↗</a
+                    >
+                    <details class="source-details">
+                      <summary>Source notes</summary>
+                      <ul>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/MoyoClientPortal/blob/main/README.md"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >README.md ↗</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/MoyoClientPortal/blob/main/docs/requirements-implementation.md"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >docs/requirements-implementation.md ↗</a
+                          >
+                        </li>
+                      </ul>
+                      <p>
+                        Summarised from public source and documentation,
+                        reviewed 21 October 2026. No performance results or
+                        individual contribution claims have been invented.
+                      </p>
+                    </details></template
+                  >
+                </article>
+                <article class="project" data-category="frontend">
+                  <button
+                    class="terminal-preview"
+                    type="button"
+                    data-project="02"
+                    aria-label="Open FilmLog case study"
+                  >
+                    <div class="code-preview">
+                      <div class="mini-titlebar">
+                        <span>● ● ●</span
+                        ><span>FilmLog-assignment2-INF345</span>
+                      </div>
+                      <div class="mini-code">
+                        <span class="code-muted">// FilmLog</span><br /><span
+                          class="code-key"
+                          >project</span
+                        >
+                        {<br />&nbsp; stack:
+                        <span class="code-string"
+                          >"Ionic · Angular · TypeScript"</span
+                        >,<br />&nbsp; source:
+                        <span class="code-string">"github.com/Domy05"</span
+                        ><br />}<br /><span class="code-muted"
+                          >&gt; open case study_</span
+                        >
+                      </div>
+                    </div>
+                    <span class="preview-label">CODE PREVIEW / COURSEWORK</span
+                    ><span class="preview-open" aria-hidden="true">↗</span>
+                  </button>
+                  <div class="project-heading">
+                    <h3>FilmLog</h3>
+                    <span>02</span>
+                  </div>
+                  <p class="project-sub">
+                    A personal watchlist, one film at a time.
+                  </p>
+                  <p class="project-tags">Ionic · Angular · TypeScript</p>
+                  <a
+                    class="card-source"
+                    href="https://github.com/Domy05/FilmLog-assignment2-INF345"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub ↗</a
+                  ><template id="project-02"
+                    ><p class="eyebrow">COURSEWORK / 02</p>
+                    <h2>FilmLog</h2>
+                    <p>
+                      A film-tracking coursework app with movie search, detail
+                      pages, a watchlist, and a watched collection. The source
+                      uses Ionic and Angular with browser-local persistence.
+                    </p>
+                    <p class="project-tags">Ionic · Angular · TypeScript</p>
+                    <h3>Implemented in the repository</h3>
+                    <ul>
+                      <li>Movie search through an external search API</li>
+                      <li>Per-user watchlists and watched collections</li>
+                      <li>
+                        Watch counts and moving films back to the watchlist
+                      </li>
+                      <li>Movie-detail navigation</li>
+                    </ul>
+                    <h3>Technical focus</h3>
+                    <p>
+                      Mapping external movie responses into an app model and
+                      keeping watchlist and watched states consistent without
+                      duplicate entries.
+                    </p>
+                    <p class="dialog-note">
+                      Coursework implementation. User and collection data are
+                      stored locally in the browser; this is not presented as
+                      production authentication.
+                    </p>
+                    <a
+                      class="repo-link"
+                      href="https://github.com/Domy05/FilmLog-assignment2-INF345"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >&gt; View repository ↗</a
+                    >
+                    <details class="source-details">
+                      <summary>Source notes</summary>
+                      <ul>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/FilmLog-assignment2-INF345/blob/main/src/app/services/movie.ts"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >src/app/services/movie.ts ↗</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/FilmLog-assignment2-INF345/blob/main/src/app/services/storage.ts"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >src/app/services/storage.ts ↗</a
+                          >
+                        </li>
+                      </ul>
+                      <p>
+                        Summarised from public source and documentation,
+                        reviewed 21 October 2026. No performance results or
+                        individual contribution claims have been invented.
+                      </p>
+                    </details></template
+                  >
+                </article>
+                <article class="project" data-category="fullstack">
+                  <button
+                    class="terminal-preview"
+                    type="button"
+                    data-project="03"
+                    aria-label="Open CampusBuzz case study"
+                  >
+                    <div class="code-preview">
+                      <div class="mini-titlebar">
+                        <span>● ● ●</span><span>CAMPUSBUZZ-INF354</span>
+                      </div>
+                      <div class="mini-code">
+                        <span class="code-muted">// CampusBuzz</span><br /><span
+                          class="code-key"
+                          >project</span
+                        >
+                        {<br />&nbsp; stack:
+                        <span class="code-string"
+                          >"Angular · C# · Entity Framework Core"</span
+                        >,<br />&nbsp; source:
+                        <span class="code-string">"github.com/Domy05"</span
+                        ><br />}<br /><span class="code-muted"
+                          >&gt; open case study_</span
+                        >
+                      </div>
+                    </div>
+                    <span class="preview-label">CODE PREVIEW / COURSEWORK</span
+                    ><span class="preview-open" aria-hidden="true">↗</span>
+                  </button>
+                  <div class="project-heading">
+                    <h3>CampusBuzz</h3>
+                    <span>03</span>
+                  </div>
+                  <p class="project-sub">
+                    Campus events, organised in one place.
+                  </p>
+                  <p class="project-tags">
+                    Angular · C# · Entity Framework Core
+                  </p>
+                  <a
+                    class="card-source"
+                    href="https://github.com/Domy05/CAMPUSBUZZ-INF354"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub ↗</a
+                  ><template id="project-03"
+                    ><p class="eyebrow">COURSEWORK / 03</p>
+                    <h2>CampusBuzz</h2>
+                    <p>
+                      An event-management coursework project with an Angular
+                      frontend and an ASP.NET Core API. The code supports
+                      listing, creating, editing, and deleting events.
+                    </p>
+                    <p class="project-tags">
+                      Angular · C# · Entity Framework Core
+                    </p>
+                    <h3>Implemented in the repository</h3>
+                    <ul>
+                      <li>Event listing with loading and error states</li>
+                      <li>Create, update, and delete API endpoints</li>
+                      <li>Event title, location, and ticket-price editing</li>
+                      <li>Entity Framework Core database access</li>
+                    </ul>
+                    <h3>Technical focus</h3>
+                    <p>
+                      Connecting a CRUD interface to persistent event data,
+                      validating updates, and handling failed listing requests
+                      with retry behavior.
+                    </p>
+                    <p class="dialog-note">
+                      Source reviewed; the application and its automated tests
+                      were not run during this portfolio update.
+                    </p>
+                    <a
+                      class="repo-link"
+                      href="https://github.com/Domy05/CAMPUSBUZZ-INF354"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >&gt; View repository ↗</a
+                    >
+                    <details class="source-details">
+                      <summary>Source notes</summary>
+                      <ul>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/CAMPUSBUZZ-INF354/blob/main/CampusBuzzAPI/Controllers/EventController.cs"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >CampusBuzzAPI/Controllers/EventController.cs ↗</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/CAMPUSBUZZ-INF354/blob/main/CampusBuzzAngular/src/app/components/event-listing/event-listing.ts"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >CampusBuzzAngular/src/app/components/event-listing/event-listing.ts
+                            ↗</a
+                          >
+                        </li>
+                      </ul>
+                      <p>
+                        Summarised from public source and documentation,
+                        reviewed 21 October 2026. No performance results or
+                        individual contribution claims have been invented.
+                      </p>
+                    </details></template
+                  >
+                </article>
+                <article class="project" data-category="frontend">
+                  <button
+                    class="terminal-preview"
+                    type="button"
+                    data-project="04"
+                    aria-label="Open Nuxt Portfolio case study"
+                  >
+                    <div class="code-preview">
+                      <div class="mini-titlebar">
+                        <span>● ● ●</span><span>imyAss2</span>
+                      </div>
+                      <div class="mini-code">
+                        <span class="code-muted">// Nuxt Portfolio</span
+                        ><br /><span class="code-key">project</span>
+                        {<br />&nbsp; stack:
+                        <span class="code-string"
+                          >"Nuxt · Vue · CSS · REST APIs"</span
+                        >,<br />&nbsp; source:
+                        <span class="code-string">"github.com/Domy05"</span
+                        ><br />}<br /><span class="code-muted"
+                          >&gt; open case study_</span
+                        >
+                      </div>
+                    </div>
+                    <span class="preview-label">CODE PREVIEW / COURSEWORK</span
+                    ><span class="preview-open" aria-hidden="true">↗</span>
+                  </button>
+                  <div class="project-heading">
+                    <h3>Nuxt Portfolio</h3>
+                    <span>04</span>
+                  </div>
+                  <p class="project-sub">
+                    An earlier portfolio with live API widgets.
+                  </p>
+                  <p class="project-tags">Nuxt · Vue · CSS · REST APIs</p>
+                  <a
+                    class="card-source"
+                    href="https://github.com/Domy05/imyAss2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub ↗</a
+                  ><template id="project-04"
+                    ><p class="eyebrow">COURSEWORK / 04</p>
+                    <h2>Nuxt Portfolio</h2>
+                    <p>
+                      A Nuxt portfolio with biography, projects, and contact
+                      routes. Its projects page integrates a cat-fact service
+                      and current weather for Pretoria.
+                    </p>
+                    <p class="project-tags">Nuxt · Vue · CSS · REST APIs</p>
+                    <h3>Implemented in the repository</h3>
+                    <ul>
+                      <li>Separate home, project, and contact pages</li>
+                      <li>Cat-fact API integration</li>
+                      <li>Open-Meteo weather integration</li>
+                      <li>Page-specific CSS styling</li>
+                    </ul>
+                    <h3>Technical focus</h3>
+                    <p>
+                      Fetching external API data with Nuxt composables and
+                      presenting it alongside a multi-page personal portfolio.
+                    </p>
+                    <p class="dialog-note">
+                      An earlier coursework portfolio. Historical biography text
+                      is not used as evidence of current study year.
+                    </p>
+                    <a
+                      class="repo-link"
+                      href="https://github.com/Domy05/imyAss2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >&gt; View repository ↗</a
+                    >
+                    <details class="source-details">
+                      <summary>Source notes</summary>
+                      <ul>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/imyAss2/blob/main/pages/projects.vue"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >pages/projects.vue ↗</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/imyAss2/blob/main/composer/weatherInformation.js"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >composer/weatherInformation.js ↗</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/imyAss2/blob/main/composer/catInformation.js"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >composer/catInformation.js ↗</a
+                          >
+                        </li>
+                      </ul>
+                      <p>
+                        Summarised from public source and documentation,
+                        reviewed 21 October 2026. No performance results or
+                        individual contribution claims have been invented.
+                      </p>
+                    </details></template
+                  >
+                </article>
+                <article class="project" data-category="frontend">
+                  <button
+                    class="terminal-preview"
+                    type="button"
+                    data-project="05"
+                    aria-label="Open Swift Courier case study"
+                  >
+                    <div class="code-preview">
+                      <div class="mini-titlebar">
+                        <span>● ● ●</span><span>HW_assignmentCOS216</span>
+                      </div>
+                      <div class="mini-code">
+                        <span class="code-muted">// Swift Courier</span
+                        ><br /><span class="code-key">project</span>
+                        {<br />&nbsp; stack:
+                        <span class="code-string"
+                          >"HTML · PHP · Web fundamentals"</span
+                        >,<br />&nbsp; source:
+                        <span class="code-string">"github.com/Domy05"</span
+                        ><br />}<br /><span class="code-muted"
+                          >&gt; open case study_</span
+                        >
+                      </div>
+                    </div>
+                    <span class="preview-label"
+                      >CODE PREVIEW / COLLABORATIVE COURSEWORK</span
+                    ><span class="preview-open" aria-hidden="true">↗</span>
+                  </button>
+                  <div class="project-heading">
+                    <h3>Swift Courier</h3>
+                    <span>05</span>
+                  </div>
+                  <p class="project-sub">
+                    Separate entry points for customers and couriers.
+                  </p>
+                  <p class="project-tags">HTML · PHP · Web fundamentals</p>
+                  <a
+                    class="card-source"
+                    href="https://github.com/Domy05/HW_assignmentCOS216"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub ↗</a
+                  ><template id="project-05"
+                    ><p class="eyebrow">COLLABORATIVE COURSEWORK / 05</p>
+                    <h2>Swift Courier</h2>
+                    <p>
+                      A collaborative courier-themed coursework repository. The
+                      HTML landing page routes visitors to separate customer and
+                      courier pages, and explicitly credits Dominiqu Nigatu and
+                      Nathan Chisadza.
+                    </p>
+                    <p class="project-tags">HTML · PHP · Web fundamentals</p>
+                    <h3>Implemented in the repository</h3>
+                    <ul>
+                      <li>Customer and courier page navigation</li>
+                      <li>Courier-themed landing page</li>
+                      <li>PHP API files included in the repository</li>
+                    </ul>
+                    <h3>Technical focus</h3>
+                    <p>
+                      Structuring a small multi-page web interface around two
+                      user roles.
+                    </p>
+                    <p class="dialog-note">
+                      Early coursework prototype. End-to-end delivery booking
+                      and tracking are not claimed. Individual task ownership is
+                      not documented in the reviewed files.
+                    </p>
+                    <a
+                      class="repo-link"
+                      href="https://github.com/Domy05/HW_assignmentCOS216"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >&gt; View repository ↗</a
+                    >
+                    <details class="source-details">
+                      <summary>Source notes</summary>
+                      <ul>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/HW_assignmentCOS216/blob/main/index.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >index.html ↗</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/HW_assignmentCOS216/blob/main/customer.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >customer.html ↗</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/Domy05/HW_assignmentCOS216/blob/main/courier.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >courier.html ↗</a
+                          >
+                        </li>
+                      </ul>
+                      <p>
+                        Summarised from public source and documentation,
+                        reviewed 21 October 2026. No performance results or
+                        individual contribution claims have been invented.
+                      </p>
+                    </details></template
+                  >
+                </article>
+              </div>
+              <p class="collection-note">
+                Source-backed project summaries. Code previews are
+                illustrations, not application screenshots. More repositories on
+                <a
+                  href="https://github.com/Domy05?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub ↗</a
+                >.
+              </p>
+            </div>
+          </section>
+          <section class="panel" id="about">
+            <div class="panel-bar">
+              <span>▣ ABOUT — readme.md</span>
+              <div class="window-controls">
+                <button
+                  type="button"
+                  data-window-action="minimize"
+                  aria-label="Minimize About"
+                  title="Minimize"
+                >
+                  −</button
+                ><button
+                  type="button"
+                  data-window-action="close"
+                  aria-label="Close About"
+                  title="Close"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            <div class="panel-content about-layout">
+              <div>
+                <p class="command-label">$ cat about.txt</p>
+                <h2>
+                  Curiosity is part<br />of the process<span class="green"
+                    >.</span
+                  >
+                </h2>
+              </div>
+              <div class="prose">
+                <p>
+                  I enjoy turning ideas into polished, responsive websites and
+                  applications. The interesting part is figuring out how
+                  something should work—and making it feel natural to use.
+                </p>
+                <p>
+                  I care about accessible interfaces, maintainable code, and the
+                  small decisions that make a digital experience better.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="panel" id="skills">
+            <div class="panel-bar">
+              <span>▣ SKILLS — installed packages</span>
+              <div class="window-controls">
+                <button
+                  type="button"
+                  data-window-action="minimize"
+                  aria-label="Minimize Skills"
+                  title="Minimize"
+                >
+                  −</button
+                ><button
+                  type="button"
+                  data-window-action="close"
+                  aria-label="Close Skills"
+                  title="Close"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            <div class="panel-content skills-grid">
+              <div>
+                <p class="command-label">[ development ]</p>
+                <h2>Tools of the trade.</h2>
+                <p class="muted">The toolkit behind the interfaces.</p>
+              </div>
+              <div class="skill-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span
+                ><span>TypeScript</span><span>Angular</span><span>Ionic</span
+                ><span>Vue / Nuxt</span><span>C# / ASP.NET Core</span
+                ><span>Responsive design</span><span>Accessibility</span
+                ><span>UI design</span><span>Figma</span><span>Git</span>
+              </div>
+            </div>
+          </section>
+          <section class="panel" id="approach">
+            <div class="panel-bar">
+              <span>▣ APPROACH — process.sh</span>
+              <div class="window-controls">
+                <button
+                  type="button"
+                  data-window-action="minimize"
+                  aria-label="Minimize Approach"
+                  title="Minimize"
+                >
+                  −</button
+                ><button
+                  type="button"
+                  data-window-action="close"
+                  aria-label="Close Approach"
+                  title="Close"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            <div class="panel-content approach-grid">
+              <article>
+                <span class="command-label">01 / discover</span>
+                <h3>Understand the idea</h3>
+                <p>
+                  Start with the purpose, the people using it, and what needs to
+                  feel simpler.
+                </p>
+              </article>
+              <article>
+                <span class="command-label">02 / build</span>
+                <h3>Make it tangible</h3>
+                <p>
+                  Shape the interface, build the interactions, and turn a
+                  thought into something usable.
+                </p>
+              </article>
+              <article>
+                <span class="command-label">03 / refine</span>
+                <h3>Care for the details</h3>
+                <p>
+                  Refine accessibility, responsiveness, and the bits that make
+                  it feel right.
+                </p>
+              </article>
+            </div>
+          </section>
+          <section class="panel" id="contact">
+            <div class="panel-bar">
+              <span>▣ CONTACT — open a connection</span>
+              <div class="window-controls">
+                <button
+                  type="button"
+                  data-window-action="minimize"
+                  aria-label="Minimize Contact"
+                  title="Minimize"
+                >
+                  −</button
+                ><button
+                  type="button"
+                  data-window-action="close"
+                  aria-label="Close Contact"
+                  title="Close"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            <div class="panel-content contact-layout">
+              <div>
+                <p class="command-label">$ connect --with dominiqu</p>
+                <h2>
+                  Have an idea?<br />Let’s build it<span class="cursor">_</span>
+                </h2>
+                <p class="muted">
+                  A project, a question, or a thought.<br />My inbox is open.
+                </p>
+                <a class="email-link" href="mailto:ndominiqu@gmail.com"
+                  >&gt; ndominiqu@gmail.com ↗</a
+                >
+              </div>
+              <form id="contactForm" class="contact-form">
+                <div class="field-row">
+                  <div class="form-group">
+                    <label for="name">Your name</label
+                    ><input
+                      id="name"
+                      name="name"
+                      autocomplete="name"
+                      placeholder="Your Name"
+                      required
+                      maxlength="120"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address</label
+                    ><input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      placeholder="Your Email"
+                      required
+                      maxlength="254"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subject">What’s it about?</label
+                  ><input
+                    id="subject"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                    maxlength="200"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Tell me a little more</label
+                  ><textarea
+                    id="message"
+                    name="message"
+                    placeholder="Your Message"
+                    rows="3"
+                    required
+                    maxlength="5000"
+                  ></textarea>
+                </div>
+                <button class="btn send-button" type="submit">
+                  Send message <span>↗</span>
+                </button>
+              </form>
+            </div>
+          </section>
+          <section class="panel" id="settings">
+            <div class="panel-bar">
+              <span>▣ SETTINGS — preferences.json</span>
+              <div class="window-controls">
+                <button
+                  type="button"
+                  data-window-action="minimize"
+                  aria-label="Minimize Settings"
+                  title="Minimize"
+                >
+                  −</button
+                ><button
+                  type="button"
+                  data-window-action="close"
+                  aria-label="Close Settings"
+                  title="Close"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            <div class="panel-content settings-content">
+              <p class="command-label">$ configure --your-workspace</p>
+              <h2>Make yourself comfortable.</h2>
+              <p>
+                Your preferences are saved in this browser when storage is
+                available.
+              </p>
+              <fieldset>
+                <legend>Terminal colour</legend>
+                <div class="theme-options">
+                  <button
+                    type="button"
+                    data-theme-choice="green"
+                    aria-pressed="true"
+                  >
+                    ● Green phosphor</button
+                  ><button
+                    type="button"
+                    data-theme-choice="amber"
+                    aria-pressed="false"
+                  >
+                    ● Amber terminal</button
+                  ><button
+                    type="button"
+                    data-theme-choice="blue"
+                    aria-pressed="false"
+                  >
+                    ● Cool blue
+                  </button>
+                </div>
+              </fieldset>
+              <div class="setting-row">
+                <label for="text-size">Text size</label
+                ><select id="text-size">
+                  <option value="standard">Standard — already enlarged</option>
+                  <option value="large">Large</option>
+                  <option value="larger">Extra large</option>
+                </select>
+              </div>
+              <div class="setting-row">
+                <label for="motion-setting">Motion</label
+                ><select id="motion-setting">
+                  <option value="system">Follow device preference</option>
+                  <option value="reduce">Reduce motion</option>
+                  <option value="full">Full animations</option>
+                </select>
+              </div>
+              <div class="setting-row">
+                <label for="crt-setting">Screen scanlines</label
+                ><input id="crt-setting" type="checkbox" checked />
+              </div>
+              <div class="settings-actions">
+                <button id="replay-boot" type="button">
+                  Replay boot sequence</button
+                ><button id="reset-settings" type="button">
+                  Reset preferences
+                </button>
+              </div>
+              <p id="settings-status" role="status"></p>
+            </div>
+          </section>
+          <p class="end-note">
+            &lt;/&gt; CRAFTED WITH CURIOSITY · ©
+            <span id="year">2026</span> DOMINIQU NIGATU
+          </p>
+        </main>
+      </div>
+      <footer class="taskbar">
+        <div>
+          <a href="#home" class="task-active">[01] HOME</a
+          ><a href="#work">[02] PROJECTS</a><a href="#contact">[03] CONTACT</a>
+        </div>
+        <span class="taskbar-right"
+          ><span class="online-dot"></span> READY <span id="footer-clock"></span
+        ></span>
+      </footer>
+    </div>
+    <dialog id="project-dialog">
+      <button
+        class="dialog-close"
+        type="button"
+        aria-label="Close project details"
+      >
+        [ Close × ]
+      </button>
+      <div id="dialog-content"></div>
+    </dialog>
+    <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+  </body>
+</html>
