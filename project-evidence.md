@@ -1,6 +1,6 @@
 # Project evidence
 
-Reviewed 21 October 2026 using public GitHub trees, READMEs, and source. These are code reviews, not runtime validation.
+Reviewed 22 October 2026 using public GitHub trees, READMEs, manifests, and source. These are code reviews, not runtime validation.
 
 ## Moyo Client Portal
 
@@ -52,6 +52,45 @@ Early coursework prototype. End-to-end delivery booking and tracking are not cla
 
 Sources: index.html, customer.html, courier.html
 
+## Additional public repositories reviewed
+
+### imy220project
+
+https://github.com/Domy05/imy220project
+
+The public manifest identifies a React application using React Router, an
+Express backend, Webpack, Babel, and CSS loaders. The repository README does
+not describe the application scope, so no additional project claims are made.
+
+Sources: package.json
+
+### IMYASS3
+
+https://github.com/Domy05/IMYASS3
+
+A Strapi backend configured with the users-permissions plugin, SQLite through
+better-sqlite3, React dependencies, styled-components, and TypeScript
+development tooling. The repository README is the default Strapi guide, so
+this is technology evidence rather than a product case study.
+
+Sources: package.json, README.md
+
+### imy220project, IMYASS3, and CampusBuzz infrastructure
+
+The public repositories also provide evidence of Node/npm workflows, Docker
+configuration, SQL Server development, and Azure/GitHub Actions deployment
+planning. These are listed as technologies used or configured in repositories;
+they are not presented as independently verified production operations.
+
+Sources: imy220project/package.json, IMYASS3/package.json,
+CampusBuzz README, Moyo Client Portal/README.md,
+Moyo Client Portal/docs/production-deployment.md
+
 ## Exclusions
 
-Smart-File-Manager is a fork; individual contribution unverified. inf272-RAC9 has no files on main. imy220project and IMYASS3 have limited directly available application source; archived ZIPs were not unpacked. No verified demo URLs or application screenshots were found for selected entries. Public development credentials were not copied into the portfolio.
+Private repositories were not inspected. inf272-RAC9 is public but empty. The
+public imy220project and IMYASS3 repositories have limited application source;
+archived ZIPs were not unpacked. Smart-File-Manager is a fork; individual
+contribution is unverified. No verified demo URLs or application screenshots
+were found for selected entries. Public development credentials were not
+copied into the portfolio.
