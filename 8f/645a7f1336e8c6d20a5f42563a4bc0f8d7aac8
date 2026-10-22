@@ -1,0 +1,21 @@
+project-evidence.md
+  s_a7bb118673e299::t_de44cbd880f0a6 3,55-88,91-96
+index.html
+  s_a7bb118673e299::t_de44cbd880f0a6 921-923,927-929,931-938
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8f645a7f1336e8c6d20a5f42563a4bc0f8d7aac8",
+  "prompts": {},
+  "sessions": {
+    "s_a7bb118673e299": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "1c287094-fb96-4c92-8d73-1030911493e4",
+        "model": "auto"
+      },
+      "human_author": "Dominiqu <u24580482@tuks.co.za>"
+    }
+  }
+}
