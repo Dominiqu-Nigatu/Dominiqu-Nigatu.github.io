@@ -5,7 +5,7 @@ The layout is inspired by Brittany Chiang's portfolio, with Dominiqu's own copy,
 project summaries, source links, and contact form. No employment history is invented.
 
 ## Design
-- Navy Blue (#072D59) background, Seal Blue (#DBF2FC) text, Golden Yellow (#FFD166) accents, and bundled Inter fonts.
+- Navy Blue (#072D59) background, Seal Blue (#DBF2FC) text, and Golden Yellow (#FFD166) accents.
 - Sticky profile and section navigation on desktop; stacked content on smaller screens.
 - About, Projects, Skills, and Contact sections on one continuous page.
 - Five project detail dialogs and direct GitHub repository links.
@@ -20,7 +20,6 @@ project summaries, source links, and contact form. No employment history is inve
 - `js/navigation.js`: section tracking and pointer highlight.
 - `js/projects.js`: project dialogs and copyright year.
 - `js/contact.js`: EmailJS integration and form handling.
-- `fonts/inter-latin-400.woff2`, `fonts/inter-latin-600.woff2`: local typography; license in `fonts/Inter-OFL.txt`.
 
 ## Preview
 Run `python3 -m http.server 8765 --bind 127.0.0.1` from this directory.
