@@ -1,0 +1,22 @@
+README.md
+  h_0aff3b71f739b1 41-48
+css/command-prompt.css
+  h_0aff3b71f739b1 1-146
+index.html
+  h_0aff3b71f739b1 10-21,45,47,131,142,155,176,229,246,1110,1113-1119,1125,1131
+js/preferences.js
+  h_0aff3b71f739b1 3-4,7,16,18-24,41-42
+styles.css
+  h_0aff3b71f739b1 1-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4fc82966f5847ce0c86898e56f9dfb38a58a19e8",
+  "prompts": {},
+  "humans": {
+    "h_0aff3b71f739b1": {
+      "author": "Dominiqu <u24580482@tuks.co.za>"
+    }
+  }
+}
