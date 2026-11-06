@@ -15,6 +15,7 @@
  .social-links { margin:0; }
  main { padding:10px 0 40px; }
  .content-section { margin-bottom:76px; scroll-margin-top:24px; }
+ .content-section:not(:last-of-type) { padding-bottom:38px; margin-bottom:38px; }
  .section-heading { position:sticky; top:0; z-index:3; background:rgba(7,45,89,.96); backdrop-filter:blur(8px); padding:18px 0; margin-bottom:15px; }
  .project-list { margin-top:-8px; }
 }

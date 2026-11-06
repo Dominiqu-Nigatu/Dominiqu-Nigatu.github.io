@@ -59,3 +59,12 @@ dialog li { margin-bottom:6px; }
 .source-details { margin-top:28px; border-top:1px solid var(--border); padding-top:20px; }
 .source-details summary { cursor:pointer; font-size:13px; color:var(--heading); }
 .source-details p,.source-details li { font-size:12px; }
+
+.skill-groups { display:flex; flex-direction:column; gap:26px; }
+.skill-group h3 { font-size:14px; font-weight:600; margin:0 0 12px; }
+.project-content > .project-context { font-size:12px; color:var(--muted); margin-bottom:10px; }
+
+.profile-resources { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:14px 24px; margin-bottom:30px; font-size:13px; font-weight:600; }
+.profile-resources a { color:var(--accent); border-bottom:1px solid transparent; padding:3px 0; }
+.profile-resources a:hover { border-bottom-color:var(--accent); }
+.resource-format { font-size:11px; font-weight:400; }

@@ -24,6 +24,7 @@ strong { font-weight:600; }
 .profile-intro { max-width:320px; line-height:1.55; }
 main { min-width:0; padding:96px 0 50px; }
 .content-section { scroll-margin-top:84px; margin-bottom:100px; }
+.content-section:not(:last-of-type) { border-bottom:1px solid rgba(219,242,252,.3); padding-bottom:50px; margin-bottom:50px; }
 .section-heading { font-size:12px; line-height:1.5; letter-spacing:2px; text-transform:uppercase; margin-bottom:28px; font-weight:600; }
 .about-copy p { margin-bottom:20px; }
 .about-copy p:last-child { margin-bottom:0; }

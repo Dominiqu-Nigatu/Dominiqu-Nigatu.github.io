@@ -8,7 +8,7 @@ project summaries, source links, and contact form. No employment history is inve
 - Navy Blue (#072D59) background, Seal Blue (#DBF2FC) text, and Golden Yellow (#FFD166) accents.
 - Sticky profile and section navigation on desktop; stacked content on smaller screens.
 - About, Projects, Skills, and Contact sections on one continuous page.
-- Five project detail dialogs and direct GitHub repository links.
+- Seven project detail dialogs and direct GitHub repository links.
 - No terminal chrome, boot intro, code previews, project filters, or window manager.
 - Active section tracking, subtle pointer spotlight, and reduced-motion support.
 - Original EmailJS configuration and contact submission flow retained.
@@ -27,7 +27,7 @@ Open http://127.0.0.1:8765.
 
 ## Validation
 Desktop browser checks verified section navigation, sticky profile positioning,
-all five project cards, project detail opening with the matching repository,
+all seven project cards, project detail opening with the matching repository,
 contact field presence, and no horizontal overflow at the tested viewport.
 A static 390px-wide rendering was visually checked; mobile interactions were not
 browser-tested. JavaScript syntax checks and git diff whitespace checks passed.
@@ -39,3 +39,11 @@ Contact delivery was not tested: submitting the form sends a real email. No GitH
 
 ## Security follow-up
 The public CampusBuzz README contains a development credential. It was not copied into the portfolio. If valid, rotate it and remove the exposed value from repository history. This update did not change that repository.
+
+## CV content update
+About and grouped skills incorporate the supplied Dominiqu Nigatu CV. The capstone
+(University of Pretoria, industry mentor Agile Bridge) and Technology Price
+Comparison Platform were added, and FilmLog was expanded in place. New project
+claims are CV-supplied, not independently repository-verified. No repository links
+were invented for the two added projects. FilmLog's existing link remains labelled
+as the frontend source. No phone number or downloadable CV was added.
