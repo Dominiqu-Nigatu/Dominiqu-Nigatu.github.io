@@ -1,9 +1,10 @@
 // Browser-local preferences, with safe defaults when storage is blocked.
 const defaultPreferences = {
-  theme: "green",
+  theme: "classic",
+  themeRevision: "cmd-1",
   textSize: "standard",
   motion: "system",
-  crt: true,
+  crt: false,
   artwork: "monogram",
 };
 let preferences = { ...defaultPreferences };
@@ -12,8 +13,15 @@ try {
     localStorage.getItem("dominiqu-portfolio-preferences") || "null",
   );
   if (saved && typeof saved === "object")
-    preferences = { ...preferences, ...saved };
+    preferences = { ...preferences, ...saved, themeRevision: saved.themeRevision };
 } catch (_) {}
+// Apply the new default once, without discarding text-size or artwork choices.
+if (preferences.themeRevision !== "cmd-1") {
+  preferences.theme = "classic";
+  preferences.crt = false;
+  preferences.themeRevision = "cmd-1";
+  savePreferences();
+}
 function motionIsReduced() {
   return (
     preferences.motion === "reduce" ||
@@ -30,8 +38,8 @@ function savePreferences() {
   } catch (_) {}
 }
 function applyPreferences() {
-  if (!["green", "amber", "blue"].includes(preferences.theme))
-    preferences.theme = "green";
+  if (!["classic", "green", "amber", "blue"].includes(preferences.theme))
+    preferences.theme = "classic";
   if (!["standard", "large", "larger"].includes(preferences.textSize))
     preferences.textSize = "standard";
   if (!["system", "reduce", "full"].includes(preferences.motion))

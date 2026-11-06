@@ -38,3 +38,11 @@ The public CampusBuzz README contains a development credential. It was not copie
 
 ## Hero artwork options
 Home offers DN, PC, and Globe buttons to compare a personal monogram, retro ASCII workstation, and rotating ASCII Earth. Selection persists locally. Globe rotation pauses when hidden and provides a manual pause button; reduced-motion mode shows a static globe. No first-visit storage flag gates the boot animation.
+
+## Command Prompt appearance
+The default is now classic light-gray text on black, with Consolas-style monospace
+type, square borders, flat title bars, inverted selections, and Windows-style
+prompts. `css/command-prompt.css` is the final theme layer. Green, amber, and blue
+remain optional text palettes on black in Settings. Scanlines default to off.
+Existing browser preferences migrate once to the classic theme while retaining
+text-size, motion, and artwork settings.

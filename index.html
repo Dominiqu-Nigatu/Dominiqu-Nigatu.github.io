@@ -7,18 +7,18 @@
       name="description"
       content="Dominiqu Nigatu — developer and digital maker. Explore projects in a terminal-inspired portfolio."
     />
-    <meta name="theme-color" content="#080d09" />
-    <title>Dominiqu Nigatu — Portfolio OS</title>
-    <link rel="stylesheet" href="styles.css?v=terminal-6" />
-    <script src="js/preferences.js?v=terminal-6" defer></script>
-    <script src="js/projects.js?v=terminal-6" defer></script>
-    <script src="js/contact.js?v=terminal-6" defer></script>
-    <script src="js/clock.js?v=terminal-6" defer></script>
-    <script src="js/windows.js?v=terminal-6" defer></script>
-    <script src="js/terminal.js?v=terminal-6" defer></script>
-    <script src="js/settings.js?v=terminal-6" defer></script>
-    <script src="js/boot.js?v=terminal-6" defer></script>
-    <script src="js/artwork.js?v=terminal-6" defer></script>
+    <meta name="theme-color" content="#000000" />
+    <title>Dominiqu Nigatu — Command Prompt</title>
+    <link rel="stylesheet" href="styles.css?v=cmd-2" />
+    <script src="js/preferences.js?v=cmd-1" defer></script>
+    <script src="js/projects.js?v=cmd-1" defer></script>
+    <script src="js/contact.js?v=cmd-1" defer></script>
+    <script src="js/clock.js?v=cmd-1" defer></script>
+    <script src="js/windows.js?v=cmd-1" defer></script>
+    <script src="js/terminal.js?v=cmd-1" defer></script>
+    <script src="js/settings.js?v=cmd-1" defer></script>
+    <script src="js/boot.js?v=cmd-1" defer></script>
+    <script src="js/artwork.js?v=cmd-1" defer></script>
   </head>
   <body>
     <div
@@ -42,9 +42,9 @@
     <div class="desktop">
       <header class="os-bar">
         <a href="#home" class="os-brand"
-          ><span class="os-logo">⌘</span>
+          ><span class="os-logo" aria-hidden="true">C:\&gt;_</span>
           <span
-            >Dominiqu Nigatu <span class="muted">— Portfolio OS</span>
+            >Dominiqu Nigatu <span class="muted">— Command Prompt</span>
             <small>v.1.0</small></span
           ></a
         >
@@ -128,7 +128,7 @@
                 aria-pressed="true"
                 title="Toggle screen effects"
               >
-                CRT: ON
+                CRT: OFF
               </button>
             </div>
           </section>
@@ -139,7 +139,7 @@
         <main id="main" tabindex="-1">
           <div id="idle-terminal" class="idle-terminal" hidden>
             <div class="idle-header">
-              <span>dominiqu@portfolio:~$ ./workspace --idle</span
+              <span>C:\Users\Dominiqu&gt; ./workspace --idle</span
               ><button id="pause-code" type="button" aria-pressed="false">
                 Pause output
               </button>
@@ -152,7 +152,7 @@
           </div>
           <section class="panel terminal-panel" id="home">
             <div class="panel-bar">
-              <span>▣ TERMINAL — ~/dominiqu</span>
+              <span>C:\Users\Dominiqu &gt; home</span>
               <div class="window-controls">
                 <button
                   type="button"
@@ -173,7 +173,7 @@
             </div>
             <div class="terminal-body">
               <p class="boot-line">
-                PORTFOLIO OS [VERSION 1.0.26]<br />Connection established.
+                DOMINIQU PORTFOLIO [Version 1.0.26]<br />Connection established.
                 Welcome to my workspace.
               </p>
               <div class="hero-layout">
@@ -226,7 +226,7 @@
                   >
                 </div>
                 <div class="hero-copy">
-                  <p class="command-label">guest@portfolio:~$ whoami</p>
+                  <p class="command-label">C:\Users\Guest&gt; whoami</p>
                   <h1>Dominiqu Nigatu<span class="cursor">_</span></h1>
                   <p class="hero-role">DEVELOPER &amp; DIGITAL MAKER</p>
                   <p class="hero-description">
@@ -243,7 +243,7 @@
               </div>
               <div id="terminal-output" aria-live="polite"></div>
               <form id="terminal-form" class="command-form">
-                <label for="command-input">guest@portfolio:~$</label
+                <label for="command-input">C:\Users\Guest&gt;</label
                 ><input
                   id="command-input"
                   autocomplete="off"
@@ -1107,22 +1107,28 @@
                 <div class="theme-options">
                   <button
                     type="button"
-                    data-theme-choice="green"
+                    data-theme-choice="classic"
                     aria-pressed="true"
                   >
-                    ● Green phosphor</button
+                    [ Command Prompt ]</button
+                  ><button
+                    type="button"
+                    data-theme-choice="green"
+                    aria-pressed="false"
+                  >
+                    [ Green ]</button
                   ><button
                     type="button"
                     data-theme-choice="amber"
                     aria-pressed="false"
                   >
-                    ● Amber terminal</button
+                    [ Amber ]</button
                   ><button
                     type="button"
                     data-theme-choice="blue"
                     aria-pressed="false"
                   >
-                    ● Cool blue
+                    [ Blue ]
                   </button>
                 </div>
               </fieldset>
