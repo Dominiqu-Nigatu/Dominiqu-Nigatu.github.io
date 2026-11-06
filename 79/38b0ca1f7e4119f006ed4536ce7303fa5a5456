@@ -1,0 +1,36 @@
+README.md
+  h_0aff3b71f739b1 1-23,26-27,30-35
+css/animations.css
+  h_0aff3b71f739b1 1-2
+css/base.css
+  h_0aff3b71f739b1 1-31
+css/components.css
+  h_0aff3b71f739b1 1-61
+css/responsive.css
+  h_0aff3b71f739b1 1-39
+fonts/Inter-OFL.txt
+  h_0aff3b71f739b1 1-92
+fonts/OFL.txt
+  h_0aff3b71f739b1 1-94
+index.html
+  h_0aff3b71f739b1 2-20,22-32,35-43,45-57,59-61,383
+js/contact.js
+  h_0aff3b71f739b1 175-176,183
+js/navigation.js
+  h_0aff3b71f739b1 1-29
+js/projects.js
+  h_0aff3b71f739b1 18
+styles.css
+  h_0aff3b71f739b1 1-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7938b0ca1f7e4119f006ed4536ce7303fa5a5456",
+  "prompts": {},
+  "humans": {
+    "h_0aff3b71f739b1": {
+      "author": "Dominiqu <u24580482@tuks.co.za>"
+    }
+  }
+}
