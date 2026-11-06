@@ -172,15 +172,15 @@ function showNotification(message, type = "success") {
   notification.setAttribute("role", type === "error" ? "alert" : "status");
   notification.textContent = message;
 
-  const bgColor = type === "success" ? "#43e97b" : "#ff6b6b";
-  const borderColor = type === "success" ? "#2bc47d" : "#ff5252";
+  const bgColor = "#072D59";
+  const borderColor = type === "success" ? "#DBF2FC" : "#FFD166";
 
   notification.style.cssText = `
         position: fixed;
         top: 20px;
         right: 20px;
         background: ${bgColor};
-        color: white;
+        color: #DBF2FC;
         padding: 16px 24px;
         border-radius: 8px;
         border-left: 4px solid ${borderColor};

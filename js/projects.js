@@ -1,21 +1,3 @@
-applyPreferences();
-const filters = document.querySelectorAll("[data-filter]");
-filters.forEach((button) =>
-  button.addEventListener("click", () => {
-    filters.forEach((item) =>
-      item.setAttribute("aria-pressed", String(item === button)),
-    );
-    let count = 0;
-    document.querySelectorAll(".project").forEach((project) => {
-      project.hidden =
-        button.dataset.filter !== "all" &&
-        project.dataset.category !== button.dataset.filter;
-      if (!project.hidden) count++;
-    });
-    document.querySelector("#announcer").textContent =
-      `${count} projects shown`;
-  }),
-);
 const dialog = document.querySelector("#project-dialog");
 document.querySelectorAll("[data-project]").forEach((button) =>
   button.addEventListener("click", async () => {
@@ -23,21 +5,6 @@ document.querySelectorAll("[data-project]").forEach((button) =>
     const original = button.innerHTML;
     button.disabled = true;
     try {
-      if (!motionIsReduced()) {
-        button.classList.add("launching");
-        const launch = document.createElement("span");
-        launch.className = "launch-status";
-        launch.textContent = "> loading project files...";
-        button.append(launch);
-        const animation = launch.animate(
-          [
-            { opacity: 0, transform: "translateY(6px)" },
-            { opacity: 1, transform: "translateY(0)" },
-          ],
-          { duration: 420, easing: "ease-out" },
-        );
-        await animation.finished;
-      }
       document
         .querySelector("#dialog-content")
         .replaceChildren(
@@ -48,7 +15,7 @@ document.querySelectorAll("[data-project]").forEach((button) =>
       dialog.setAttribute("aria-labelledby", "dialog-title");
       dialog.querySelector("h2").id = "dialog-title";
       dialog.showModal();
-      if (!motionIsReduced())
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
         dialog.animate(
           [
             { opacity: 0, transform: "translateY(18px) scale(.97)" },
