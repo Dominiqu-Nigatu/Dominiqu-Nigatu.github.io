@@ -1,41 +1,169 @@
 @media (max-width:1100px) {
- .portfolio-layout { column-gap:60px; padding:0 40px; }
- .profile h1 { font-size:38px; }
+    .portfolio-layout {
+        column-gap: 60px;
+        padding: 0 40px;
+    }
+
+    .profile h1 {
+        font-size: 38px;
+    }
 }
+
 @media (max-width:900px) {
- html { scroll-padding-top:24px; }
- .portfolio-layout { display:block; max-width:760px; padding:0 40px; }
- .profile { position:relative; height:auto; min-height:0; padding:72px 0 56px; gap:32px; }
- .profile h1 { font-size:44px; }
- .profile-intro { max-width:370px; }
- .section-nav { margin-top:35px; flex-direction:row; flex-wrap:wrap; gap:20px; }
- .nav-line { display:none; }
- .section-nav a { font-size:11px; }
- .profile-bottom { display:flex; align-items:center; gap:24px; }
- .social-links { margin:0; }
- main { padding:10px 0 40px; }
- .content-section { margin-bottom:76px; scroll-margin-top:24px; }
- .content-section:not(:last-of-type) { padding-bottom:38px; margin-bottom:38px; }
- .section-heading { position:sticky; top:0; z-index:3; background:rgba(7,45,89,.96); backdrop-filter:blur(8px); padding:18px 0; margin-bottom:15px; }
- .project-list { margin-top:-8px; }
+    html {
+        scroll-padding-top: 24px;
+    }
+
+    .portfolio-layout {
+        display: block;
+        max-width: 760px;
+        padding: 0 40px;
+    }
+
+    .profile {
+        position: relative;
+        height: auto;
+        min-height: 0;
+        padding: 72px 0 56px;
+        gap: 32px;
+    }
+
+    .profile h1 {
+        font-size: 44px;
+    }
+
+    .profile-intro {
+        max-width: 370px;
+    }
+
+    .section-nav {
+        margin-top: 35px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .section-nav a {
+        font-size: 11px;
+    }
+
+    .profile-bottom {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .social-links {
+        margin: 0;
+    }
+
+    main {
+        padding: 10px 0 40px;
+    }
+
+    .content-section {
+        margin-bottom: 76px;
+        scroll-margin-top: 24px;
+    }
+
+    .content-section:not(:last-of-type) {
+        padding-bottom: 38px;
+        margin-bottom: 38px;
+    }
+
+    .section-heading {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        background: rgba(7, 45, 89, .96);
+        backdrop-filter: blur(8px);
+        padding: 18px 0;
+        margin-bottom: 15px;
+    }
+
+    .project-list {
+        margin-top: -8px;
+    }
 }
+
 @media (max-width:520px) {
- .portfolio-layout { padding:0 24px; }
- .profile { padding-top:48px; }
- .profile h1 { font-size:36px; letter-spacing:-1.3px; }
- .profile-role { font-size:18px; }
- .profile-intro { font-size:15px; }
- .profile-bottom { display:block; }
- .profile-note { margin-top:18px; }
- .section-nav { gap:20px; }
- .project-list { margin-left:-12px; margin-right:-12px; }
- .project-card { grid-template-columns:28px minmax(0,1fr); gap:12px; padding:20px 12px; }
- .field-row { grid-template-columns:1fr; gap:18px; }
- .form-group input,.form-group textarea { font-size:16px; }
- dialog { padding:22px; }
- .notification { max-width:calc(100vw - 32px) !important; right:16px !important; }
+    .portfolio-layout {
+        padding: 0 24px;
+    }
+
+    .profile {
+        padding-top: 48px;
+    }
+
+    .profile h1 {
+        font-size: 36px;
+        letter-spacing: -1.3px;
+    }
+
+    .profile-role {
+        font-size: 18px;
+    }
+
+    .profile-intro {
+        font-size: 15px;
+    }
+
+    .profile-bottom {
+        display: block;
+    }
+
+    .profile-note {
+        margin-top: 18px;
+    }
+
+    .section-nav {
+        gap: 20px;
+    }
+
+    .project-list {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .project-card {
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 12px;
+        padding: 20px 12px;
+    }
+
+    .field-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+    }
+
+    dialog {
+        padding: 22px;
+    }
+
+    .notification {
+        max-width: calc(100vw - 32px) !important;
+        right: 16px !important;
+    }
 }
+
 @media (prefers-reduced-motion:reduce) {
- html { scroll-behavior:auto; }
- *,*::before,*::after { animation:none !important; transition:none !important; }
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
 }
