@@ -1,0 +1,24 @@
+.github/workflows/pages.yml
+  s_98cb9d5510e7f2::t_2f30d87453389b 25-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9d7d61c330ec71b66ecb0def762bf668e17dc276",
+  "prompts": {},
+  "humans": {
+    "h_0aff3b71f739b1": {
+      "author": "Dominiqu <u24580482@tuks.co.za>"
+    }
+  },
+  "sessions": {
+    "s_98cb9d5510e7f2": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "efaeae0b-9ecd-4706-bf82-ed1522c2aef9",
+        "model": "unknown"
+      },
+      "human_author": "Dominiqu <u24580482@tuks.co.za>"
+    }
+  }
+}
