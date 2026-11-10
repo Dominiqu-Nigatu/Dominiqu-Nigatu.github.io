@@ -22,8 +22,12 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Prepare static site
+        run: |
+          mkdir -p _site
+          cp index.html styles.css _site/
+          cp -R css js assets _site/
+          touch _site/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
